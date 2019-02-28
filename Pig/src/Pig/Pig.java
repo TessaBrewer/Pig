@@ -1,4 +1,4 @@
-package Pig; //java web start?
+package Pig; //@notesForMe: java web start?
 import java.awt.BorderLayout;
 
 import javax.swing.*;
