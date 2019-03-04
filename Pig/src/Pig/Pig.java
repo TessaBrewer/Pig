@@ -1,4 +1,5 @@
 package Pig; //@notesForMe: java web start?
+import java.awt.Color;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import javax.swing.*;
@@ -11,11 +12,14 @@ public class Pig
 		frame.setUndecorated(true);
 		frame.getRootPane().setWindowDecorationStyle(JRootPane.FRAME);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //closes the program when the frame is exited
-		frame.setLayout(new GridBagLayout());
+		GridBagLayout progLayout = new GridBagLayout();
+		frame.setLayout(progLayout);
 		
 		JLabel userOneLabel = new JLabel("User One");
+			userOneLabel.setForeground(Color.RED);
 		JLabel currentRoll = new JLabel("0");
 		JLabel userTwoLabel = new JLabel("User Two");
+			userTwoLabel.setForeground(Color.BLUE);
 		JLabel CurrentPot = new JLabel("Pot");
 		JButton rollButton = new JButton("Roll Again");
 		JButton takeButton = new JButton("Keep");
