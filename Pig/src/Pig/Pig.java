@@ -21,11 +21,11 @@ public class Pig
 	static JLabel currentPot = new JLabel("Pot");
 	static JButton rollButton = new JButton("Roll Again");
 	static JButton takeButton = new JButton("Keep");
-	public static void initGUI()
+	public static void initGUI()//creates the jFrame
 	{
 		Random random = new Random();	
 		//beginning of the bit that makes the jFrame
-		JFrame frame = new JFrame("Frame"); //creates the jframe
+		JFrame frame = new JFrame("Frame"); //creates the jFrame
 		frame.setUndecorated(true);
 		frame.getRootPane().setWindowDecorationStyle(JRootPane.FRAME);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //closes the program when the frame is exited
@@ -94,7 +94,7 @@ public class Pig
 	{	
 		initGUI();
 	}
-	public static void onRoll(Random random)
+	public static void onRoll(Random random)//runs when the user chooses to roll again
 	{
 		takeButton.setEnabled(true);
 		currentRollValue = random.nextInt(6) + 1;
@@ -107,7 +107,7 @@ public class Pig
 			onTake();
 		}
 	}
-	public static void onTake()
+	public static void onTake() //runs when the user picks take OR when they roll a 1
 	{
 		if(currentUser)
 		{
@@ -142,7 +142,7 @@ public class Pig
 		if(userTwoScore > 100)
 			onWin(2);
 	}
-	public static void onWin(int winner)
+	public static void onWin(int winner) //runs when one of the players gets more than 100 points
 	{
 		String winnerName = winner == 1 ? "User One" : "User Two";
 		System.out.println(winnerName + " won, the final score was " + userOneScore + ":" + userTwoScore);
